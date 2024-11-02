@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>선그래프</title>
+		<link rel="stylesheet" href="../src/style/main.css">
+	</head>
+	<body>
+		<div id="root">
+			<ul id="input_container" class="input_container">
+				<li class="input_header input_list">
+					<h2>입력창</h2>
+					<ul id="input_header_btn_container" class="input_header_btn_container">
+						<li class="input_header_btn"><button type="button" id="drawCanvaw_btn">표 그리기</button></li>
+						<li class="input_header_btn"><button type="button" id="reset_btn" class="reset_btn">Reset</button></li>
+						<li class="input_header_btn"><button type="button" id="addList_btn" class="addList_btn">&plus;</button></li>
+					</ul>
+				</li>
+
+				<li class="input_list">
+					<label><span>이름 :</span><input type="text" placeholder="이름" /></label>
+					<label><span>점수 :</span> <input type="number" placeholder="점수" value="0" /></label>
+				</li>
+
+				<li class="input_list">
+					<label><span>이름 :</span> <input type="text" placeholder="이름" /></label>
+					<label><span>점수 :</span> <input type="number" placeholder="점수" value="0" /></label>
+				</li>
+
+				<li class="input_list">
+					<label><span>이름 :</span> <input type="text" placeholder="이름" /></label>
+					<label><span>점수 :</span> <input type="number" placeholder="점수" value="0" /></label>
+				</li>
+
+				<li class="input_list">
+					<label><span>이름 :</span> <input type="text" placeholder="이름" /></label>
+					<label><span>점수 :</span> <input type="number" placeholder="점수" value="0" /></label>
+				</li>
+				
+				<li class="input_list">
+					<label><span>이름 :</span> <input type="text" placeholder="이름" /></label>
+					<label><span>점수 :</span> <input type="number" placeholder="점수" value="0" /></label>
+				</li>
+			</ul>
+
+			<section id="canvas_container" class="canvas_container">
+				<canvas id="testResult" class="testResult" width="1000" height="890"></canvas>
+			</section>
+		</div>
+
+		<section class="modal_collection">
+			<article id="allZero" class="allZero">
+				<div class="modal_title">
+					<h3> 입력 오류 </h3>
+					<button id="close_btn" class="close_btn"> CLOSE </button>
+				</div>
+
+				<div class="modal_content">
+					<p>빈 점수 입력창이 있습니다.</p>
+					<p>점수을 입력하여 주십시오.</p>
+					<p>이대로 값을 유지하시겠습니까&#63;<p>
+				</div>
+				
+				<div class="modal_buttons">
+					<button id="OK_btn">OK</button>
+					<button id="cancel_btn">CANCEL</button>
+				</div>
+			</article>
+			
+			<article id="value_over_100" class="value_over_100">
+				<div class="modal_title">
+					<h3> 입력 오류 </h3>
+					<button class="close_btn"> CLOSE </button>
+				</div>
+
+				<div class="modal_content">
+					<p>입력 값들 중에 최소 하나 이상이</p>
+					<p>100을 초과하였습니다.</p>
+					<p>이름을 입력하여 주십시오.</p>
+				</div>
+				
+				<div class="modal_buttons">
+					<button>OK</button>
+				</div>
+			</article>
+
+			<article id="not_input_name" class="not_input_name">
+				<div class="modal_title">
+					<h3> 입력 오류 </h3>
+					<button class="close_btn"> CLOSE </button>
+				</div>
+
+				<div class="modal_content">
+					<p>빈 이름 입력창이 있습니다.</p>
+					<p>이름을 입력하여 주십시오.</p>
+				</div>
+				
+				<div class="modal_buttons">
+					<button>OK</button>
+				</div>
+			</article>
+		</section>
+		<script src="../src/script/main.js"></script>
+	</body>
+</html>
